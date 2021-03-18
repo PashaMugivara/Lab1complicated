@@ -18,3 +18,9 @@ C:\Users\ermak\Desktop\Lab1complicated\UnitTestProject1\obj\Debug\UnitTestProjec
 C:\Users\ermak\Desktop\Lab1complicated\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CopyComplete
 C:\Users\ermak\Desktop\Lab1complicated\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\ermak\Desktop\Lab1complicated\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\ermak\Desktop\Lab1complicated\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\ermak\Desktop\Lab1complicated\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ermak\Desktop\Lab1complicated\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ermak\Desktop\Lab1complicated\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\ermak\Desktop\Lab1complicated\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\ermak\Desktop\Lab1complicated\UnitTestProject1\bin\Debug\Microsoft.IdentityModel.Tokens.xml

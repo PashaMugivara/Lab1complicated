@@ -29,7 +29,7 @@ namespace Labawpf
 
   
         }
-        public void Import()
+        private void Import()
         {
             string a;
             OpenFileDialog ofd = new OpenFileDialog(); // создаём процесс  
@@ -51,7 +51,7 @@ namespace Labawpf
             }
             else MessageBox.Show("Файл не выбран");
         }
-        public void Export()
+        private void Export()
         {
             SaveFileDialog ofd = new SaveFileDialog();
             ofd.ShowDialog();
@@ -67,11 +67,11 @@ namespace Labawpf
 
 
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        public void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        public void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
         }
@@ -80,7 +80,7 @@ namespace Labawpf
 
         }
 
-        private string Encrypt(string a, uint b, bool c)
+        public string Encrypt(string a, uint b, bool c)
         {
             bool IsUpper = false;
             char[] tempText = a.ToCharArray();
@@ -112,7 +112,7 @@ namespace Labawpf
             return new string(tempText);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public virtual void Button_Click(object sender, RoutedEventArgs e)
         {
 
             var text = TextBox1.Text;
@@ -121,7 +121,6 @@ namespace Labawpf
                 cezar.Step = a;
                 cezar.InText = TextBox2.Text;
                 cezar.OutText = Encrypt(cezar.InText, cezar.Step, !(cezar.Direction ^ cezar.Shipher));
-                cezar.InText = cezar.OutText;
                 TextBox3.Text = cezar.OutText;
             }
             else MessageBox.Show("Некорректный шаг");
@@ -129,7 +128,7 @@ namespace Labawpf
 
 
 
-        private void Open_File(object sender, RoutedEventArgs e)
+        public void Open_File(object sender, RoutedEventArgs e)
         {
             Import();
             TextBox2.Text = cezar.InText;
@@ -138,42 +137,46 @@ namespace Labawpf
         {
             Export();
         }
-        private void Shifrate(object sender, RoutedEventArgs e)
+        public void Shifrate(object sender, RoutedEventArgs e)
         {
             Shifrate1.IsChecked = true; 
             Dishifrate1.IsChecked = false;
             cezar.Shipher = true;
         }
-        private void Dishifrate(object sender, RoutedEventArgs e)
+        public void Dishifrate(object sender, RoutedEventArgs e)
         {
             Shifrate1.IsChecked = false;
             Dishifrate1.IsChecked = true;
             cezar.Shipher = false;
         }
-        private void DirRight(object sender, RoutedEventArgs e)
+        public void DirRight(object sender, RoutedEventArgs e)
         {
             DirRight1.IsChecked = true;
             DirLeft1.IsChecked = false;
             cezar.Direction = true;
         }
-        private void DirLeft(object sender, RoutedEventArgs e)
+        public void DirLeft(object sender, RoutedEventArgs e)
         {
             DirRight1.IsChecked = false;
             DirLeft1.IsChecked = true;
             cezar.Direction = false;
         }
 
-        private void AlgorithmA(object sender, RoutedEventArgs e)
+        public void AlgorithmA(object sender, RoutedEventArgs e)
         {
             Algorithm1.IsChecked = true;
             Algorithm2.IsChecked = false;
             cezar.Simbols = "0123456789абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
         }
-        private void AlgorithmB(object sender, RoutedEventArgs e)
+        public void AlgorithmB(object sender, RoutedEventArgs e)
         {
             Algorithm1.IsChecked = false;
             Algorithm2.IsChecked = true;
             cezar.Simbols = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+        }
+        public void GetStep()
+        {
+            TextBox1.Text = cezar.Step.ToString();
         }
     }
 }
